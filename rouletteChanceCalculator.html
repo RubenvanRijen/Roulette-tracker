@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Meta Info-->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Website</title>
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script type="" src="index.js" defer></script>
+</head>
+
+<body>
+    <div class="middle">
+        <input type="number" name="rouletteNumber" id="rouletteNumber" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md" placeholder="roulette number" onkeydown="getVal(this, event)" />
+    </div>
+    <section>
+        <div class="middle">
+            <table class="custom-table">
+                <tr>
+                    <th>Red</th>
+                    <th>Black</th>
+                </tr>
+                <tr>
+                    <td id='Red'></td>
+                    <td id='Black'></td>
+                </tr>
+            </table>
+    </section>
+    <section>
+        <div class="middle">
+            <table class="custom-table">
+                <tr>
+                    <th>Even</th>
+                    <th>Uneven</th>
+                </tr>
+                <tr>
+                    <td id='Even'></td>
+                    <td id='Uneven'></td>
+                </tr>
+            </table>
+    </section>
+    <section>
+        <div class="middle">
+            <table class="custom-table">
+                <tr>
+                    <th>1-18</th>
+                    <th>19-36</th>
+                </tr>
+                <tr>
+                    <td id='Low'></td>
+                    <td id='High'></td>
+                </tr>
+            </table>
+    </section>
+    <section>
+        <div class="middle">
+            <table class="custom-table">
+                <tr>
+                    <th>1-row</th>
+                    <th>2-row</th>
+                    <th>3-row</th>
+                </tr>
+                <tr>
+                    <td id='firstRow'></td>
+                    <td id='secondRow'></td>
+                    <td id='thrirdRow'></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section>
+        <div class="middle">
+            <table class="custom-table">
+                <tr>
+                    <th>1-12</th>
+                    <th>13-24</th>
+                    <th>25-36</th>
+                </tr>
+                <tr>
+                    <td id='firstDozen'></td>
+                    <td id='middleDozen'></td>
+                    <td id='lastDozen'></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section>
+        <div class="middle">
+            <table class="custom-table">
+                <tr>
+                    <th>First half (9, 22, 18, 29, 7, 28, 12, 35, 3, 26, 0, 32, 15, 19, 4, 21, 2, 25)</th>
+                    <th>Second half (17, 34, 6, 27, 13, 36, 11, 30, 8, 23, 10, 5, 24, 16, 33, 1, 20, 14, 31)</th>
+                </tr>
+                <tr>
+                    <td id='firstHalf'></td>
+                    <td id='secondHalf'></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section>
+        <div class="middle">
+            <table class="custom-table">
+                <tr>
+                    <th>First half (0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13, 36, 11, 30, 8, 32, 10)</th>
+                    <th>Second half (26, 3, 35, 12, 28, 7, 29, 18, 22, 9, 31, 14, 20, 1, 33, 16, 24, 5)</th>
+                </tr>
+                <tr>
+                    <td id='firstHalf2'></td>
+                    <td id='secondHalf2'></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    </div>
+    <section>
+        <div class="middle">
+            <h3 class="sequence" id="Sequence">
+                </p>
+        </div>
+    </section>
+</body>
+
+</html>
+<!-- npx tailwindcss -i index.css -o ./dist/output.css --watch -->

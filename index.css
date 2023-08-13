@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.middle {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    border: 1px solid black;
+}
+
+td,
+th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+    text-align: center
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.custom-table {
+    margin-top: 5rem;
+}
