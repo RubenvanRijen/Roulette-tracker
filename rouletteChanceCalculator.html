@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!--Meta Info-->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,122 +8,221 @@
     <title>My Website</title>
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="index.css" />
+    <!-- import the bootstrap 5 components -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- import the webpage's javascript file -->
     <script type="" src="index.js" defer></script>
-</head>
+  </head>
 
-<body>
-    <div class="middle">
-        <input type="number" name="rouletteNumber" id="rouletteNumber" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md" placeholder="roulette number" onkeydown="getVal(this, event)" />
+  <body class="bg-secondary">
+    <div
+      class="modal fade"
+      id="warningModal"
+      tabindex="-1"
+      aria-labelledby="warningModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="warningModalLabel">Warning</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">Please enter a number between 0 and 36</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-    <section>
-        <div class="middle">
-            <table class="custom-table">
-                <tr>
-                    <th>Red</th>
-                    <th>Black</th>
-                </tr>
-                <tr>
-                    <td id='Red'></td>
-                    <td id='Black'></td>
-                </tr>
-            </table>
-    </section>
-    <section>
-        <div class="middle">
-            <table class="custom-table">
-                <tr>
-                    <th>Even</th>
-                    <th>Uneven</th>
-                </tr>
-                <tr>
-                    <td id='Even'></td>
-                    <td id='Uneven'></td>
-                </tr>
-            </table>
-    </section>
-    <section>
-        <div class="middle">
-            <table class="custom-table">
-                <tr>
-                    <th>1-18</th>
-                    <th>19-36</th>
-                </tr>
-                <tr>
-                    <td id='Low'></td>
-                    <td id='High'></td>
-                </tr>
-            </table>
-    </section>
-    <section>
-        <div class="middle">
-            <table class="custom-table">
-                <tr>
-                    <th>1-row</th>
-                    <th>2-row</th>
-                    <th>3-row</th>
-                </tr>
-                <tr>
-                    <td id='firstRow'></td>
-                    <td id='secondRow'></td>
-                    <td id='thrirdRow'></td>
-                </tr>
-            </table>
-        </div>
-    </section>
-    <section>
-        <div class="middle">
-            <table class="custom-table">
-                <tr>
-                    <th>1-12</th>
-                    <th>13-24</th>
-                    <th>25-36</th>
-                </tr>
-                <tr>
-                    <td id='firstDozen'></td>
-                    <td id='middleDozen'></td>
-                    <td id='lastDozen'></td>
-                </tr>
-            </table>
-        </div>
-    </section>
-    <section>
-        <div class="middle">
-            <table class="custom-table">
-                <tr>
-                    <th>First half (9, 22, 18, 29, 7, 28, 12, 35, 3, 26, 0, 32, 15, 19, 4, 21, 2, 25)</th>
-                    <th>Second half (17, 34, 6, 27, 13, 36, 11, 30, 8, 23, 10, 5, 24, 16, 33, 1, 20, 14, 31)</th>
-                </tr>
-                <tr>
-                    <td id='firstHalf'></td>
-                    <td id='secondHalf'></td>
-                </tr>
-            </table>
-        </div>
-    </section>
-    <section>
-        <div class="middle">
-            <table class="custom-table">
-                <tr>
-                    <th>First half (0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13, 36, 11, 30, 8, 32, 10)</th>
-                    <th>Second half (26, 3, 35, 12, 28, 7, 29, 18, 22, 9, 31, 14, 20, 1, 33, 16, 24, 5)</th>
-                </tr>
-                <tr>
-                    <td id='firstHalf2'></td>
-                    <td id='secondHalf2'></td>
-                </tr>
-            </table>
-        </div>
-    </section>
-    </div>
-    <section>
-        <div class="middle">
-            <h3 class="sequence" id="Sequence">
-                </p>
-        </div>
-    </section>
-</body>
 
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <div class="input-group">
+            <input
+              type="number"
+              name="rouletteNumber"
+              id="rouletteNumber"
+              class="form-control"
+              placeholder="roulette number"
+              onkeydown="getVal(this, event)"
+            />
+            <button
+              id="resetButton"
+              class="btn btn-primary"
+              onclick="reset()"
+            >
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+      <section class="mt-5">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <table class="table table-dark table-striped">
+              <tr>
+                <th>Red</th>
+                <th>Black</th>
+              </tr>
+              <tr>
+                <td id="Red"></td>
+                <td id="Black"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="mt-5">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <table class="table table-dark table-striped">
+              <tr>
+                <th>Even</th>
+                <th>Uneven</th>
+              </tr>
+              <tr>
+                <td id="Even"></td>
+                <td id="Uneven"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="mt-5">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <table class="table table-dark table-striped">
+              <tr>
+                <th>1-18</th>
+                <th>19-36</th>
+              </tr>
+              <tr>
+                <td id="Low"></td>
+                <td id="High"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="mt-5">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <table class="table table-dark table-striped">
+              <tr>
+                <th>1-row</th>
+                <th>2-row</th>
+                <th>3-row</th>
+              </tr>
+              <tr>
+                <td id="firstRow"></td>
+                <td id="secondRow"></td>
+                <td id="thirdRow"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="mt-5">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <table class="table table-dark table-striped">
+              <tr>
+                <th>1-12</th>
+                <th>13-24</th>
+                <th>25-36</th>
+              </tr>
+              <tr>
+                <td id="firstDozen"></td>
+                <td id="middleDozen"></td>
+                <td id="lastDozen"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="mt-5">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <table class="table table-dark table-striped">
+              <tr>
+                <th>
+                  First half (9, 22, 18, 29, 7, 28, 12, 35, 3, 26, 0, 32, 15,
+                  19, 4, 21, 2, 25)
+                </th>
+                <th>
+                  Second half (17, 34, 6, 27, 13, 36, 11, 30, 8, 23, 10, 5, 24,
+                  16, 33, 1, 20, 14, 31)
+                </th>
+              </tr>
+              <tr>
+                <td id="firstHalf"></td>
+                <td id="secondHalf"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="mt-5">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <table class="table table-dark table-striped">
+              <tr>
+                <th>
+                  First half (0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13,
+                  36, 11, 30, 8, 32, 10)
+                </th>
+                <th>
+                  Second half (26, 3, 35, 12, 28, 7, 29, 18, 22, 9, 31, 14, 20,
+                  1, 33, 16, 24, 5)
+                </th>
+              </tr>
+              <tr>
+                <td id="firstHalf2"></td>
+                <td id="secondHalf2"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="mt-5">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <h3 class="text-center" id="Sequence">
+              <!-- Your text here -->
+            </h3>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
 <!-- npx tailwindcss -i index.css -o ./dist/output.css --watch -->

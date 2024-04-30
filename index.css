@@ -1,7 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-.middle {
+/* .middle {
     display: flex;
     justify-content: center;
 }
@@ -27,4 +24,4 @@ tr:nth-child(even) {
 
 .custom-table {
     margin-top: 5rem;
-}
+} */
