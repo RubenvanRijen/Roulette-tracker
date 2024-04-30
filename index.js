@@ -150,34 +150,37 @@ function fillFields(
   firstHalfs2,
   secondHalfs2
 ) {
+  const betText = "Bet now!!";
+  const noBetText = "Do not bet yet";
+
   const red = document.getElementById("Red");
-  red.innerHTML = reds;
+  red.innerHTML = reds ? betText : noBetText;
   const black = document.getElementById("Black");
-  black.innerHTML = blacks;
+  black.innerHTML = blacks ? betText : noBetText;
 
   const even = document.getElementById("Even");
-  even.innerHTML = evens;
+  even.innerHTML = evens ? betText : noBetText;
   const unEven = document.getElementById("Uneven");
-  unEven.innerHTML = unevens;
+  unEven.innerHTML = unevens ? betText : noBetText;
 
   const low = document.getElementById("Low");
-  low.innerHTML = lowNumbers;
+  low.innerHTML = lowNumbers ? betText : noBetText;
   const high = document.getElementById("High");
-  high.innerHTML = highNumbers;
+  high.innerHTML = highNumbers ? betText : noBetText;
 
   const firstRow = document.getElementById("firstRow");
-  firstRow.innerHTML = rowOnes;
+  firstRow.innerHTML = rowOnes ? betText : noBetText;
   const secondRow = document.getElementById("secondRow");
-  secondRow.innerHTML = rowTwos;
+  secondRow.innerHTML = rowTwos ? betText : noBetText;
   const thirdRow = document.getElementById("thirdRow");
-  thirdRow.innerHTML = rowThrees;
+  thirdRow.innerHTML = rowThrees ? betText : noBetText;
 
   const firstDozen = document.getElementById("firstDozen");
-  firstDozen.innerHTML = firstDozens;
+  firstDozen.innerHTML = firstDozens ? betText : noBetText;
   const middleDozen = document.getElementById("middleDozen");
-  middleDozen.innerHTML = middleDozens;
+  middleDozen.innerHTML = middleDozens ? betText : noBetText;
   const lastDozen = document.getElementById("lastDozen");
-  lastDozen.innerHTML = lastDozens;
+  lastDozen.innerHTML = lastDozens ? betText : noBetText;
 
   const firstHalf = document.getElementById("firstHalf");
   firstHalf.innerHTML = firstHalfs;
